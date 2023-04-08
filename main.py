@@ -12,7 +12,6 @@ This file is covered by the GNU General Public License.
 See the file COPYING for more details.
 """
 
-import gettext
 import json
 import os
 import sys
@@ -111,8 +110,6 @@ class netScannerApp(wx.App):
 		return True
 
 if __name__ == "__main__":
-	gettext.install("app")  # replace with the appropriate catalog name
-
 	h = "--hidden" in [i.lower() for i in sys.argv]
 	app = netScannerApp(0, startWithHiddenWindow=h)
 	app.MainLoop()

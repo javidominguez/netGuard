@@ -1,0 +1,450 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: NET Guard\n"
+"POT-Creation-Date: 2023-04-08 23:07+0200\n"
+"PO-Revision-Date: 2023-04-08 23:31+0200\n"
+"Last-Translator: \n"
+"Language-Team: Javi Domínguez\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: gui.py\n"
+
+#: gui.py:36 gui.py:454
+msgid "Settings"
+msgstr "Preferencias"
+
+#: gui.py:43
+msgid "Threads"
+msgstr "Hilos"
+
+#: gui.py:50
+msgid "Wait time between scans"
+msgstr "Tiempo de espera entre escaneos"
+
+#: gui.py:53
+msgid "1 minute"
+msgstr "1 minuto"
+
+#: gui.py:53
+msgid "2 minutes"
+msgstr "2 minutos"
+
+#: gui.py:53
+msgid "3 minutes"
+msgstr "3 minutos"
+
+#: gui.py:53
+msgid "4 minutes"
+msgstr "4 minutos"
+
+#: gui.py:53
+msgid "5 minutes"
+msgstr "5 minutos"
+
+#: gui.py:53
+msgid "10 minutes"
+msgstr "10 minutos"
+
+#: gui.py:53
+msgid "15 minutes"
+msgstr "15 minutos"
+
+#: gui.py:53
+msgid "30 minutes"
+msgstr "30 minutos"
+
+#: gui.py:57
+msgid "Sound efects"
+msgstr "Efectos de sonido"
+
+#: gui.py:64
+msgid "OK"
+msgstr "&aceptar"
+
+#: gui.py:68
+msgid "Cancel"
+msgstr "&Cancelar"
+
+#: gui.py:96
+msgid "Device properties"
+msgstr "Detalles del dispositivo"
+
+#: gui.py:100 gui.py:216 gui.py:229
+msgid "Trust level"
+msgstr "Nivel de confianza"
+
+#: gui.py:100 gui.py:338 gui.py:348
+msgid "Red"
+msgstr "Rojo"
+
+#: gui.py:100 gui.py:338 gui.py:348
+msgid "Yellow"
+msgstr "Amarillo"
+
+#: gui.py:100 gui.py:338 gui.py:348
+msgid "Green"
+msgstr "Verde"
+
+#: gui.py:107 gui.py:217 gui.py:230
+msgid "Name"
+msgstr "Nombre"
+
+#: gui.py:113 gui.py:214 gui.py:226
+msgid "MAC address"
+msgstr "Dirección MAC"
+
+#: gui.py:119
+msgid "First detected"
+msgstr "Detectado por primera vez:"
+
+#: gui.py:125
+msgid "Last detected"
+msgstr "Última vez que se detectó:"
+
+#: gui.py:134
+msgid "&Save"
+msgstr "&Guardar"
+
+#: gui.py:153
+#, python-brace-format
+msgid "{day}/{month}/{year} {hour}:{minute}"
+msgstr "{day}/{month}/{year} {hour}:{minute}"
+
+#: gui.py:180
+msgid "NET Guard"
+msgstr "NET Guard"
+
+#: gui.py:186
+msgid "Settings..."
+msgstr "Preferencias..."
+
+#: gui.py:188
+msgid "Minimize to tray"
+msgstr "Minimizar a la bandeja"
+
+#: gui.py:190 gui.py:459
+msgid "Stop and close"
+msgstr "Detener y cerrar"
+
+#: gui.py:192
+msgid "File"
+msgstr "Archivo"
+
+#: gui.py:197
+msgid "Devices"
+msgstr "Dispositivos"
+
+#: gui.py:197
+msgid "Scanning..."
+msgstr "Escaneando..."
+
+#: gui.py:209
+msgid "online devices"
+msgstr "Dispositivos conectados"
+
+#: gui.py:215
+msgid "IP address"
+msgstr "Dirección IP"
+
+#: gui.py:221
+msgid "all devices"
+msgstr "Todos los dispositivos"
+
+#: gui.py:227
+msgid "First detection"
+msgstr "Primera detección"
+
+#: gui.py:228
+msgid "Last detection"
+msgstr "ÚLTIMA DETECCIÓN"
+
+#: gui.py:318
+msgid "scan in progress."
+msgstr "Escaneando..."
+
+#: gui.py:323
+#, python-brace-format
+msgid "Finished. Next scan at {h}:{m}"
+msgstr "Terminado. próximo escaneo a las {h}:{m}"
+
+#: gui.py:327
+#, python-brace-format
+msgid "{online} devices online, {registered} registered."
+msgstr "{online} dispositivos conectados, {registered} registrados."
+
+#: gui.py:399
+msgid "{} days ago"
+msgstr "Hace {} días"
+
+#: gui.py:400
+msgid "{} weeks ago"
+msgstr "Hace {} semanas"
+
+#: gui.py:401
+msgid "{} months ago"
+msgstr "Hace {} meses"
+
+#: gui.py:402
+msgid "{} years ago"
+msgstr "Hace {} años"
+
+#: gui.py:403
+msgid "Now"
+msgstr "Ahora"
+
+#: gui.py:404
+msgid "1 minute ago"
+msgstr "Hace un minuto"
+
+#: gui.py:405
+msgid "{} minutes ago"
+msgstr "Hace {} minutos"
+
+#: gui.py:406
+msgid "{} hours ago"
+msgstr "Hace {} horas"
+
+#: gui.py:449
+msgid "Hide window"
+msgstr "Ocultar la ventana"
+
+#: gui.py:451
+msgid "Restore"
+msgstr "Restaurar"
+
+#~ msgid "Background"
+#~ msgstr "Segundo plano"
+
+#~ msgid "Digitalizing"
+#~ msgstr "Digitalizando"
+
+#~ msgid "Getting image from scanner, please wait."
+#~ msgstr "Obteniendo imagen del escáner; por favor, espere."
+
+#~ msgid "page {}"
+#~ msgstr "Página {}"
+
+#~ msgid "Move up"
+#~ msgstr "Mover arriba"
+
+#~ msgid "Move down"
+#~ msgstr "Mover abajo"
+
+#~ msgid "Copy"
+#~ msgstr "Copiar"
+
+#~ msgid "Cut"
+#~ msgstr "Cortar"
+
+#~ msgid "Paste"
+#~ msgstr "Pegar"
+
+#~ msgid "Remove"
+#~ msgstr "Eliminar"
+
+#~ msgid "Confirm"
+#~ msgstr "Confirmar"
+
+#~ msgid "A file with the same name already exists in the specified location; do you want to replace it?"
+#~ msgstr "Ya existe un archivo con el mismo nombre en la ubicación especificada; ¿desea reemplazarlo?"
+
+#~ msgid "&Yes"
+#~ msgstr "&Sí"
+
+#~ msgid "&No"
+#~ msgstr "&No"
+
+#~ msgid "Save changes?"
+#~ msgstr "¿Guardar cambios?"
+
+#~ msgid "Do you want to save changes in the document {}"
+#~ msgstr "¿Desea guardar los cambios en el documento?"
+
+#~ msgid "&Cancel"
+#~ msgstr "&Cancelar"
+
+#~ msgid "Scanner Settings"
+#~ msgstr "Ajustes del escáner"
+
+#~ msgid "Color"
+#~ msgstr "Color"
+
+#~ msgid "RGB color"
+#~ msgstr "Color RGB"
+
+#~ msgid "Gray scale"
+#~ msgstr "Escala de grises"
+
+#~ msgid "Black and white"
+#~ msgstr "Blanco y negro"
+
+#~ msgid "Resolution"
+#~ msgstr "Resolución"
+
+#~ msgid "Show this dialog every time a page is scanned?"
+#~ msgstr "¿Mostrar este cuadro de diálogo cada vez que se escanea una página?"
+
+#~ msgid "New... (ctrl+n)"
+#~ msgstr "nuevo... (ctrl+n)"
+
+#~ msgid "Open... (ctrl+o)"
+#~ msgstr "Abrir... (ctrl+o)"
+
+#~ msgid "Save... (control+s)"
+#~ msgstr "Guardar... (control+s)"
+
+#~ msgid "Save as... (ctrl+shift+s)"
+#~ msgstr "Guardar como... (ctrl+shift+s)"
+
+#~ msgid "Recognized text (ctrl+shift+x)"
+#~ msgstr "Texto reconocido (ctrl+shift+x)"
+
+#~ msgid "Images"
+#~ msgstr "Imágenes"
+
+#~ msgid "Export"
+#~ msgstr "Exportar"
+
+#~ msgid "Text"
+#~ msgstr "Texto"
+
+#~ msgid "Print"
+#~ msgstr "Imprimir"
+
+#~ msgid "Close (ctrl+q)"
+#~ msgstr "Cerrar (ctrl+q)"
+
+#~ msgid "Closes the application"
+#~ msgstr "Cierra la aplicación"
+
+#~ msgid "Load file (ctrl+f)"
+#~ msgstr "Cargar archivo... (ctrl+f)"
+
+#~ msgid "Digitalize image (ctrl+d)"
+#~ msgstr "Digitalizar imagen (ctrl+d)"
+
+#~ msgid "Get"
+#~ msgstr "Obtener"
+
+#~ msgid "Recognized text"
+#~ msgstr "Texto reconocido"
+
+#~ msgid "List of pages"
+#~ msgstr "Lista de páginas"
+
+#~ msgid "View"
+#~ msgstr "Ver"
+
+#~ msgid "Documentation"
+#~ msgstr "Documentación"
+
+#~ msgid "License"
+#~ msgstr "Licencia"
+
+#~ msgid "View on Github"
+#~ msgstr "Ver en Github"
+
+#~ msgid "About..."
+#~ msgstr "Acerca de..."
+
+#~ msgid "Help"
+#~ msgstr "Ayuda"
+
+#~ msgid "Page {} of {}"
+#~ msgstr "Pájina {} de {}"
+
+#~ msgid "The document is empty"
+#~ msgstr "El documento está vacío"
+
+#~ msgid "New document {}"
+#~ msgstr "Nuevo documento {}"
+
+#~ msgid "Open document"
+#~ msgstr "Abrir documento"
+
+#~ msgid "TesseractOCR documents|*.tes"
+#~ msgstr "Documentos TesseractOCR|*.tes"
+
+#~ msgid "Document saved"
+#~ msgstr "Documento guardado"
+
+#~ msgid "Save document"
+#~ msgstr "Guardar documento"
+
+#~ msgid "Load image"
+#~ msgstr "Cargar imagen"
+
+#~ msgid "Recognizing"
+#~ msgstr "Reconociendo"
+
+#~ msgid "Processing the file {}"
+#~ msgstr "Procesando el archivo {}"
+
+#~ msgid "No pages added."
+#~ msgstr "No se añadió ninguna página."
+
+#~ msgid "One page added."
+#~ msgstr "Se añadió una página."
+
+#~ msgid "Added {} pages."
+#~ msgstr "Se añadieron {} páginas"
+
+#~ msgid "The process was interrupted before finishing."
+#~ msgstr "Se interrumpió el proceso antes de terminar."
+
+#~ msgid "Canceled by user"
+#~ msgstr "Cancelado por el usuario"
+
+#~ msgid "Something went wrong"
+#~ msgstr "Algo salió mal"
+
+#~ msgid "Save recognized text"
+#~ msgstr "Guardar el texto reconocido"
+
+#~ msgid "Text files|*.txt"
+#~ msgstr "Archivos de texto|*.txt"
+
+#~ msgid "Choose a folder where to save the document images:"
+#~ msgstr "Elija una carpeta donde guardar las imágenes del documento:"
+
+#~ msgid "Images saved successfully"
+#~ msgstr "Imágenes guardadas correctamente"
+
+#~ msgid "Succes"
+#~ msgstr "Correcto"
+
+#~ msgid "An error occurred and the images have not been saved"
+#~ msgstr "Ocurrió un error y las imágenes no se han guardado"
+
+#~ msgid "About"
+#~ msgstr "Acerca de"
+
+#~ msgid "Document Pages"
+#~ msgstr "Páginas del documento"
+
+#~ msgid "untitled"
+#~ msgstr "Sin título"
+
+#, python-brace-format
+#~ msgid "Digitalized image {color} {ppp}"
+#~ msgstr "Imagen digitalizada {color} {ppp}ppp"
+
+#~ msgid "Failed to extract pages from file {}"
+#~ msgstr "Error al extraer páginas del archivo {}"
+
+#, fuzzy, python-brace-format
+#~| msgid "page {}"
+#~ msgid "{file} page {npage}"
+#~ msgstr "Página {}"
+
+#~ msgid "Failed recognition of page {}"
+#~ msgstr "Falló el reconocimiento de la página {}"
+
+#~ msgid "Yes"
+#~ msgstr "&Sí"

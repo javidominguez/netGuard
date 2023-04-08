@@ -2,3 +2,4 @@
 *.pyc
 /devices.json
 /settings.json
+/locale/es/LC_MESSAGES/*.mo

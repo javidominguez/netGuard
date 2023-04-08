@@ -14,21 +14,19 @@ This file is covered by the GNU General Public License.
 See the file COPYING for more details.
 """
 
-import wx
-import wx.adv
-from datetime import datetime, timedelta
-from scanner import *
-import winsound
-import pyperclip
+import gettext
+import locale
 import os
 import sys
+import winsound
+from datetime import datetime, timedelta
 from threading import Thread
 
-import gettext
+import pyperclip
+import wx
+import wx.adv
 
-
-def _(s):
-	return s
+from scanner import *
 
 
 class SettingsDialog(wx.Dialog):
@@ -45,14 +43,15 @@ class SettingsDialog(wx.Dialog):
 		label_threads = wx.StaticText(self, wx.ID_ANY, _("Threads"))
 		gridSizer.Add(label_threads, 0, 0, 0)
 
-		self.choice_threads = wx.Choice(self, wx.ID_ANY, choices=[_("4"), _("8"), _("16"), _("32"), _("64")])
+		self.choice_threads = wx.Choice(self, wx.ID_ANY, choices=["4", "8", "16", "32", "64"])
 		self.choice_threads.SetSelection(threads)
 		gridSizer.Add(self.choice_threads, 0, 0, 0)
 
 		label_time = wx.StaticText(self, wx.ID_ANY, _("Wait time between scans"))
 		gridSizer.Add(label_time, 0, 0, 0)
 
-		self.choice_time = wx.Choice(self, wx.ID_ANY, choices=[_("1 minute"), _("2 minutes"), _("3 minutes"), _("4 minutes"), _("5 minutes"), _("10 minutes"), _("15 minutes"), _("30 minutes")])
+		self.choice_time = wx.Choice(self, wx.ID_ANY, choices=[
+			_("1 minute"), _("2 minutes"), _("3 minutes"), _("4 minutes"), _("5 minutes"), _("10 minutes"), _("15 minutes"), _("30 minutes")])
 		self.choice_time.SetSelection(timelapse)
 		gridSizer.Add(self.choice_time, 0, 0, 0)
 
@@ -115,7 +114,7 @@ class PropertiesDialog(wx.Dialog):
 		macLabel = wx.StaticText(self, wx.ID_ANY, _("MAC address"))
 		grid_sizer.Add(macLabel, 0, 0, 0)
 
-		self.macText = wx.TextCtrl(self, wx.ID_ANY, _(""), style=wx.TE_READONLY)
+		self.macText = wx.TextCtrl(self, wx.ID_ANY, "", style=wx.TE_READONLY)
 		grid_sizer.Add(self.macText, 0, 0, 0)
 
 		firstLabel = wx.StaticText(self, wx.ID_ANY, _("First detected"))
@@ -450,7 +449,7 @@ class TBIcon(wx.adv.TaskBarIcon):
 		if self.frame.IsShown():
 			caption = _("Hide window")
 		else:
-			caption = _("restore")
+			caption = _("Restore")
 		restoreItem = menu.Append(wx.ID_ANY, caption)
 		menu.Bind(wx.EVT_MENU, self.onRestore, restoreItem)
 		settingsItem = menu.Append(wx.ID_ANY, _("Settings"))
@@ -475,3 +474,10 @@ class TBIcon(wx.adv.TaskBarIcon):
 	def onClose(self, event):
 		self.frame.onClose(event)
 
+lancode = locale.normalize(locale.getdefaultlocale()[0].split("_")[0]).split("_")[0]
+if gettext.find("netguard", localedir="locale", languages=[lancode]):
+	language = gettext.translation("netguard", localedir="locale", languages=[lancode])
+	language.install()
+	_ = language.gettext
+else:
+	_ = gettext.gettext

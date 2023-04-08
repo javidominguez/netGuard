@@ -112,6 +112,7 @@ class LANScanner(Thread):
 			device_last = last if last else device_last
 			self.__devices[mac] = (device_name, device_reliability, device_first, device_last)
 		else:
+			save = True
 			if not last: last = time()
 			if not first: first = last
 			if trustLevel < 0: trustLevel = TRUST_LEVEL_RED
