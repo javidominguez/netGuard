@@ -102,6 +102,9 @@ class netScannerApp(wx.App):
 			timelapse=settings["timelapse"],
 			devices=os.path.join(self.Path, "devices.json")
 		)
+		if not scanner.getmacaddressPath:
+			wx.MessageBox("Required component getmacaddress.exe is missing", "An error occurred")
+			return False
 		alarm = Alarm()
 		self.frame = NetScannerFrame(None, wx.ID_ANY, self.Name, scanner=scanner, settings=settings, alarm=alarm)
 		self.SetTopWindow(self.frame)

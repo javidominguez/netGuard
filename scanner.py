@@ -16,13 +16,13 @@ See the file COPYING for more details.
 
 import json
 import os
+import subprocess
+import sys
 from socket import gethostbyname, gethostname
 from threading import Lock, Thread, enumerate
 from time import sleep, time
 
 import wx.lib.newevent
-from getmac import get_mac_address
-
 
 Event_DeviceFound, EVT_DEVICE_FOUND = wx.lib.newevent.NewEvent()
 Event_UnknownDeviceAlert, EVT_UNKNOWN_DEVICE_ALERT = wx.lib.newevent.NewEvent()
@@ -62,8 +62,16 @@ class LANScanner(Thread):
 		self.__eventUntrustedDeviceAlert = Event_UntrustedDeviceAlert()
 		self.__event_ScanCycleStart = Event_ScanCycleStart()
 		self.__event_ScanCycleFinish = Event_ScanCycleFinish()
+		if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "getmacaddress.exe")):
+			self.getmacaddressPath = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "getmacaddress.exe")
+		elif os.path.exists(os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "dist", "getmacaddress.exe")):
+			self.getmacaddressPath = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "dist", "getmacaddress.exe")
+		else:
+			self.getmacaddressPath = None
 
 	def run(self):
+		if not self.getmacaddressPath:
+			raise RuntimeError("Required component getmacaddress.exe is missing.")
 		ip = gethostbyname(gethostname())
 		ip = ip.split(".")[:-1]
 		while True:
@@ -180,7 +188,15 @@ class GetMACThread(Thread):
 	def run(self):
 		for ip_address in self.ipRange:
 			if self.parent.flagStop: break
-			mac = get_mac_address(ip=ip_address)
+			command = "{exe} {ip}".format(
+				exe=self.parent.getmacaddressPath,
+				ip=ip_address
+			)
+			si = subprocess.STARTUPINFO()
+			si.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+			p = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, startupinfo=si)
+			stdout, stderr = p.communicate()
+			mac =stdout.decode()
 			if mac:
 				with self.lock:
 					self.parent.update(ip_address, mac)
