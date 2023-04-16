@@ -64,8 +64,9 @@ class LANScanner(Thread):
 		self.__event_ScanCycleFinish = Event_ScanCycleFinish()
 		if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "getmacaddress.exe")):
 			self.getmacaddressPath = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "getmacaddress.exe")
-		elif os.path.exists(os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "dist", "getmacaddress.exe")):
-			self.getmacaddressPath = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "dist", "getmacaddress.exe")
+		elif os.path.exists(os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "getmacaddress.py")):
+			# Will run from source code
+			self.getmacaddressPath = "py "+os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "getmacaddress.py")
 		else:
 			self.getmacaddressPath = None
 
@@ -161,7 +162,7 @@ class LANScanner(Thread):
 	@timelapse.setter
 	def timelapse(self, value):
 		if not isinstance(value, int): raise TypeError("An int was expected")
-		if value<60 or value>900: raise ValueError("The supported range is 60-900")
+		if value<60 or value>1800: raise ValueError("The supported range is 60-900")
 		self.__timelapse = value
 
 	@property

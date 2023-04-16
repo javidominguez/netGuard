@@ -87,9 +87,8 @@ class Settings(dict):
 
 
 class netScannerApp(wx.App):
-	def __init__(self, *args, startWithHiddenWindow=False, **kwargs):
+	def __init__(self, *args, **kwargs):
 
-		self.startWithHiddenWindow = startWithHiddenWindow
 		self.Name = "NET Guard"
 		self.Path = os.path.dirname(os.path.abspath(sys.argv[0]))
 		self.IconFile = os.path.join(self.Path, "netGuard.ico")
@@ -108,11 +107,10 @@ class netScannerApp(wx.App):
 		alarm = Alarm()
 		self.frame = NetScannerFrame(None, wx.ID_ANY, self.Name, scanner=scanner, settings=settings, alarm=alarm)
 		self.SetTopWindow(self.frame)
-		if not self.startWithHiddenWindow:
+		if not "--hidden" in [i.lower() for i in sys.argv]:
 			self.frame.restore()
 		return True
 
 if __name__ == "__main__":
-	h = "--hidden" in [i.lower() for i in sys.argv]
-	app = netScannerApp(0, startWithHiddenWindow=h)
+	app = netScannerApp(0)
 	app.MainLoop()
