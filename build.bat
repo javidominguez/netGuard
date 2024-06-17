@@ -1,1 +1,1 @@
-@py setup.py build
+@py -3.7 setup.py build
